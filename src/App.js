@@ -1,11 +1,17 @@
-function App() {
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Provider from './context/Provider';
+
+import { Home, Directory } from './pages';
+
+export default function App() {
   return (
-    <section>
-      <header>
-        <h1>Leo Madeiras</h1>
-      </header>
-    </section>
+    <Provider>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/directory" component={Directory} />
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
-
-export default App;
