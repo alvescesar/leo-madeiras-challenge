@@ -74,20 +74,27 @@ function Home() {
           placeholder="Digite seu telefone"
           onChange={handleChange}
         />
-        <button
-          type="submit"
-          disabled={!validEmail || !validName || cpf.length < 11 || telefone.length < 11}
-          onClick={handleSubmit}
-        >
-          Enviar
-        </button>
-        <button
-          type="submit"
-          disabled={!validEmail || !validName || cpf.length < 11 || telefone.length < 11}
-          onClick={() => handleUpdate(userToEdit.index, values)}
-        >
-          Atualizar
-        </button>
+        {userToEdit?.index ? (
+          <button
+            type="submit"
+            disabled={
+              !validEmail || !validName || cpf.length < 11 || telefone.length < 11
+            }
+            onClick={() => handleUpdate(userToEdit.index, values)}
+          >
+            Atualizar
+          </button>
+        ) : (
+          <button
+            type="submit"
+            disabled={
+              !validEmail || !validName || cpf.length < 11 || telefone.length < 11
+            }
+            onClick={handleSubmit}
+          >
+            Enviar
+          </button>
+        )}
       </form>
       <Link to="/directory">
         <button type="button">Ver usuários cadastrados</button>
