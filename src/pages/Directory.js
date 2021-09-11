@@ -9,7 +9,7 @@ function Directory() {
   const { users, setUsers } = useContext(Context);
 
   const handleDelete = (index) => {
-    setUsers((arr) => [...arr.slice(0, index), ...arr.slice(index + 1, arr.length - 1)]);
+    setUsers((arr) => [...arr.slice(0, index), ...arr.slice(index + 1, arr.length)]);
   };
 
   useEffect(() => {
