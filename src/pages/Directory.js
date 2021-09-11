@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Context from '../context/Context';
 
 import { Header, Card } from '../components';
+import { saveLocalStorage, removeLocalStorage } from '../helper/localStorage';
 
 function Directory() {
   const { users, setUsers } = useContext(Context);
@@ -12,7 +13,7 @@ function Directory() {
   };
 
   useEffect(() => {
-    localStorage.setItem('users', JSON.stringify(users));
+    saveLocalStorage('users', users);
   }, [users]);
 
   return (
@@ -26,7 +27,9 @@ function Directory() {
         })
       )}
       <Link to="/">
-        <button>Cadastrar novo usuário</button>
+        <button onClick={() => removeLocalStorage('userToEdit')}>
+          Cadastrar novo usuário
+        </button>
       </Link>
     </section>
   );

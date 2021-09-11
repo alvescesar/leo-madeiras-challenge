@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { saveLocalStorage } from '../helper/localStorage';
+
 function Card({ user, handleDelete, index }) {
   return (
     <section key={user.cpf}>
@@ -11,9 +13,7 @@ function Card({ user, handleDelete, index }) {
       <Link to="/">
         <button
           type="button"
-          onClick={() =>
-            localStorage.setItem('userToEdit', JSON.stringify({ index, user }))
-          }
+          onClick={() => saveLocalStorage('userToEdit', { index, user })}
         >
           Editar
         </button>

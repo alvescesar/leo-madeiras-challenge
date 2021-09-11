@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Context from './Context';
 
+import { getLocalStorage } from '../helper/localStorage';
+
 const initialValues = {
   nome: '',
   cpf: '',
@@ -8,7 +10,7 @@ const initialValues = {
   telefone: '',
 };
 
-const userValues = JSON.parse(localStorage.getItem('users')) || [];
+const userValues = getLocalStorage('users') || [];
 
 function Provider({ children }) {
   const [values, setValues] = useState(initialValues);
