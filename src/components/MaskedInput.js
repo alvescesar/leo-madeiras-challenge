@@ -22,6 +22,7 @@ function MaskedInput(props) {
       name={name}
       mask={mask}
       value={value}
+      className="form__input"
       placeholder={placeholder}
       onChange={handleChange}
       required

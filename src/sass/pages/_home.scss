@@ -1,14 +1,6 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  transform: translate(50%, 50%);
+  margin: auto;
   width: 50vw;
-
-  &--animation {
-    animation: fadeInBottom 1s ease-in;
-  }
-}
-
-table th, td {
-  font-size: 2rem;
 }

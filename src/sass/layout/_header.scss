@@ -1,18 +1,17 @@
 .header {
-  background-color: $color-white;
-  background-position: top;
-  background-size: cover;
-  height: 10vh;
-  margin-bottom: 3rem;
+  height: 15vh;
+  margin: 3rem;
   position: relative;
 
   &__logo-box {
+    padding: 2rem;
     position: absolute;
-    width: 8vw;
+    width: 15vw;
   }
   
   &__text-box {
-    font-size: 2.5rem;
+    color: $color-white;
+    font-size: 3rem;
     left: 50%;
     text-align: center;
     text-transform: uppercase;

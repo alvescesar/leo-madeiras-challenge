@@ -1,11 +1,13 @@
 import React from 'react';
 
-import LeoLogo from '../assets/leo-logo.png';
-
 function Header({ title }) {
   return (
     <header className="header">
-      <img src={LeoLogo} alt="logomarca Leo Madeiras" className="header__logo-box" />
+      <img
+        src="http://amigoleo.leomadeiras.com.br/static/media/amigoleo.b8f4e1ec.png"
+        alt="logomarca Amigo Leo"
+        className="header__logo-box"
+      />
       <h1 className="header__text-box">{title}</h1>
     </header>
   );
