@@ -80,6 +80,8 @@ body {
     position: absolute;
     width: 15vw; }
   .header__text-box {
+    background-image: linear-gradient(50deg, #1d5840, 90%, #e3b500);
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     color: #FFFFFF;
     font-size: 3rem;
     left: 50%;
@@ -87,7 +89,8 @@ body {
     text-transform: uppercase;
     top: 25%;
     transform: translate(-50%);
-    position: absolute; }
+    position: absolute;
+    width: 50vw; }
 
 .footer {
   position: relative;
@@ -101,7 +104,7 @@ body {
   border-radius: 1rem;
   display: inline-block;
   font-size: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   padding: 1.5rem 4rem;
   text-align: center;
   width: 50vw; }

@@ -52,7 +52,7 @@ function Home() {
   return (
     <section>
       <Header title={toCreateOrToEdit ? 'Editar usuário' : 'Cadastro de usuários'} />
-      <section className="main-container">
+      <div className="main-container">
         <form className="form">
           <input
             type="text"
@@ -86,7 +86,7 @@ function Home() {
             placeholder={setPlaceholder('telefone')}
             onChange={handleChange}
           />
-          <section className="form__btn-box">
+          <div className="form__btn-box">
             {toCreateOrToEdit ? (
               <button
                 type="submit"
@@ -111,9 +111,9 @@ function Home() {
                 Ver usuários cadastrados
               </button>
             </Link>
-          </section>
+          </div>
         </form>
-      </section>
+      </div>
     </section>
   );
 }
