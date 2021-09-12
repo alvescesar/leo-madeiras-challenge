@@ -52,54 +52,68 @@ function Home() {
   return (
     <section>
       <Header title={toCreateOrToEdit ? 'Editar usuário' : 'Cadastro de usuários'} />
-      <form>
-        <input
-          type="text"
-          name="nome"
-          value={nome}
-          placeholder={setPlaceholder('nome')}
-          onChange={handleChange}
-          required
-        />
-        <MaskedInput
-          name="cpf"
-          mask="999.999.999-99"
-          value={cpf}
-          placeholder={setPlaceholder('CPF')}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          value={email}
-          placeholder={setPlaceholder('email')}
-          onChange={handleChange}
-          required
-        />
-        <MaskedInput
-          name="telefone"
-          mask="(99) 9 9999-9999"
-          value={telefone}
-          placeholder={setPlaceholder('telefone')}
-          onChange={handleChange}
-        />
-        {toCreateOrToEdit ? (
-          <button
-            type="submit"
-            disabled={isDisabled}
-            onClick={() => handleUpdate(userToEdit.index, values)}
-          >
-            Atualizar
-          </button>
-        ) : (
-          <button type="submit" disabled={isDisabled} onClick={handleSubmit}>
-            Enviar
-          </button>
-        )}
-      </form>
-      <Link to="/directory">
-        <button type="button">Ver usuários cadastrados</button>
-      </Link>
+      <div className="main-container">
+        <form className="form">
+          <input
+            type="text"
+            name="nome"
+            value={nome}
+            className="form__input"
+            placeholder={setPlaceholder('nome')}
+            onChange={handleChange}
+            required
+          />
+          <MaskedInput
+            name="cpf"
+            mask="999.999.999-99"
+            value={cpf}
+            placeholder={setPlaceholder('CPF')}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            value={email}
+            className="form__input"
+            placeholder={setPlaceholder('email')}
+            onChange={handleChange}
+            required
+          />
+          <MaskedInput
+            name="telefone"
+            mask="(99) 9 9999-9999"
+            value={telefone}
+            placeholder={setPlaceholder('telefone')}
+            onChange={handleChange}
+          />
+          <div className="form__btn-box">
+            {toCreateOrToEdit ? (
+              <button
+                type="submit"
+                className="btn btn--secondary"
+                disabled={isDisabled}
+                onClick={() => handleUpdate(userToEdit.index, values)}
+              >
+                Atualizar
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="btn btn--primary"
+                disabled={isDisabled}
+                onClick={handleSubmit}
+              >
+                Cadastrar
+              </button>
+            )}
+            <Link to="/directory">
+              <button type="button" className="btn btn--grey">
+                Ver usuários cadastrados
+              </button>
+            </Link>
+          </div>
+        </form>
+      </div>
     </section>
   );
 }

@@ -1,0 +1,30 @@
+.form {
+
+  &__input {
+    border-style: hidden;
+    border-radius: 1rem;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem 4rem;
+    text-align: center;
+    width: 50vw;
+
+    &:focus {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-grey-light, 0.4),
+        rgba($color-grey-dark, 0.4)
+      );
+      border: 0.2rem solid $color-orange;
+      outline: none;
+    }
+  }
+
+  &__btn-box {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+  }
+}

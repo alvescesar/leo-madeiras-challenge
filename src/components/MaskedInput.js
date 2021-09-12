@@ -4,7 +4,7 @@ import InputMask from 'react-input-mask';
 const numbersOnly = (str) => str.replace(/[^0-9]/g, '');
 
 function MaskedInput(props) {
-  const { name, mask, defaultValue, placeholder, onChange } = props;
+  const { name, mask, value, placeholder, onChange } = props;
 
   const handleChange = (event) => {
     onChange({
@@ -21,7 +21,8 @@ function MaskedInput(props) {
     <InputMask
       name={name}
       mask={mask}
-      defaultValue={defaultValue}
+      value={value}
+      className="form__input"
       placeholder={placeholder}
       onChange={handleChange}
       required

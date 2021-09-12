@@ -1,0 +1,9 @@
+.footer {
+  position: relative;
+  width: 50vw;
+  
+  &__button-box {
+    display: flex;
+    justify-content: space-between
+  }
+}

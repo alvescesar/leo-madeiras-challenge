@@ -1,0 +1,26 @@
+body {
+  color: $color-text;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+  color: $color-black;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+
+  &--main {  
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  
+  &--sub {  
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
