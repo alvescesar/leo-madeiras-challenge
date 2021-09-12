@@ -86,33 +86,33 @@ function Home() {
             placeholder={setPlaceholder('telefone')}
             onChange={handleChange}
           />
+          <section className="form__btn-box">
+            {toCreateOrToEdit ? (
+              <button
+                type="submit"
+                className="btn btn--secondary"
+                disabled={isDisabled}
+                onClick={() => handleUpdate(userToEdit.index, values)}
+              >
+                Atualizar
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="btn btn--primary"
+                disabled={isDisabled}
+                onClick={handleSubmit}
+              >
+                Cadastrar
+              </button>
+            )}
+            <Link to="/directory">
+              <button type="button" className="btn btn--grey">
+                Ver usuários cadastrados
+              </button>
+            </Link>
+          </section>
         </form>
-        <section className="form__btn-box">
-          {toCreateOrToEdit ? (
-            <button
-              type="submit"
-              className="btn btn--secondary"
-              disabled={isDisabled}
-              onClick={() => handleUpdate(userToEdit.index, values)}
-            >
-              Atualizar
-            </button>
-          ) : (
-            <button
-              type="submit"
-              className="btn btn--primary"
-              disabled={isDisabled}
-              onClick={handleSubmit}
-            >
-              Cadastrar
-            </button>
-          )}
-          <Link to="/directory">
-            <button type="button" className="btn btn--grey">
-              Ver usuários cadastrados
-            </button>
-          </Link>
-        </section>
       </section>
     </section>
   );
