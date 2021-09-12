@@ -86,19 +86,25 @@ function Home() {
         {toCreateOrToEdit ? (
           <button
             type="submit"
+            className="btn btn--secondary"
             disabled={isDisabled}
             onClick={() => handleUpdate(userToEdit.index, values)}
           >
             Atualizar
           </button>
         ) : (
-          <button type="submit" disabled={isDisabled} onClick={handleSubmit}>
-            Enviar
+          <button
+            type="submit"
+            className="btn btn--primary"
+            disabled={isDisabled}
+            onClick={handleSubmit}
+          >
+            Cadastrar
           </button>
         )}
       </form>
       <Link to="/directory">
-        <button type="button">Ver usuários cadastrados</button>
+        <button type="button" className="btn btn--grey">Ver usuários cadastrados</button>
       </Link>
     </section>
   );

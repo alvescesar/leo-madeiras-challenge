@@ -27,7 +27,11 @@ function Directory() {
         })
       )}
       <Link to="/">
-        <button onClick={() => removeLocalStorage('userToEdit')}>
+        <button
+          type="button"
+          className="btn btn--grey"
+          onClick={() => removeLocalStorage('userToEdit')}
+        >
           Cadastrar novo usuário
         </button>
       </Link>
