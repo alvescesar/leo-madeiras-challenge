@@ -1,0 +1,23 @@
+.header {
+  background-color: $color-white;
+  background-position: top;
+  background-size: cover;
+  height: 10vh;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    width: 8vw;
+  }
+  
+  &__text-box {
+    font-size: 2.5rem;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    top: 25%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
