@@ -5,7 +5,7 @@ import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
 import App from '../App.js';
-import { noUser, editUser, userList } from '../mockData';
+import { userList } from '../mockData';
 
 const renderWithRouter = (component) => {
   const history = createMemoryHistory();
@@ -34,12 +34,14 @@ describe('Website functionalities', () => {
 
     // valores finais com máscara
     expect(nameInput.value).toStrictEqual(nome);
-    expect(cpfInput.value).toStrictEqual("123.456.789-00");
+    expect(cpfInput.value).toStrictEqual('123.456.789-00');
     expect(emailInput.value).toStrictEqual(email);
     expect(phoneInput.value).toStrictEqual('(54) 3231-3232');
 
     const submitBtn = screen.getByRole('button', { name: /Cadastrar/i });
-    const directoryBtn = screen.getByRole('button', { name: /Ver usuários cadastrados/i });
+    const directoryBtn = screen.getByRole('button', {
+      name: /Ver usuários cadastrados/i,
+    });
 
     expect(submitBtn).not.toBeDisabled();
 
@@ -49,5 +51,22 @@ describe('Website functionalities', () => {
     const tableData = screen.getAllByRole('cell');
 
     expect(tableData).toHaveLength(5);
+
+    const newUserBtn = screen.getByRole('button', { name: /Editar/i });
+
+    expect(newUserBtn).toBeInTheDocument();
+
+    userEvent.click(newUserBtn);
+  });
+
+  it('allows the user to edit information', () => {
+    renderWithRouter(<App />);
+
+    const nameEdit = screen.getByPlaceholderText(/Atualize seu nome/i);
+    const editBtn = screen.getByRole('button', { name: /Atualizar/i });
+
+    expect(nameEdit).toBeInTheDocument();
+    expect(nameEdit.value).toEqual('');
+    expect(editBtn).toBeDisabled();
   });
 });
