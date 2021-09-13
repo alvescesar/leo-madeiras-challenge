@@ -2,6 +2,7 @@ table {
   background-color: $color-grey-light;
   border-collapse: collapse;
   font-size: 1.5rem;
+  margin-bottom: 6rem;
   text-align: center;
   width: 100%;
 
@@ -18,14 +19,14 @@ tr {
   &:hover {
     background-image: linear-gradient(50deg, $color-dark, 20%, $color-disabled);
     color: $color-white;
+    transition: all 0.1s;
   }
 }
 
 th {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: $color-primary;
   color: white;
+  padding: 1rem;
   width: 20%;
 
   &:last-child {
@@ -34,7 +35,5 @@ th {
 }
 
 td {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   width: 20%;
 }

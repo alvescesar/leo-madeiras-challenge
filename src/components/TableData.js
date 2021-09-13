@@ -14,12 +14,13 @@ function TableData({ user, handleDelete, index }) {
         <Link to="/">
           <button
             type="button"
+            className="btn-table btn-table--edit"
             onClick={() => saveLocalStorage('userToEdit', { index, user })}
           >
             Editar
           </button>
         </Link>
-        <button type="button" onClick={() => handleDelete(index)}>
+        <button type="button" className="btn-table btn-table--danger" onClick={() => handleDelete(index)}>
           Deletar
         </button>
       </td>

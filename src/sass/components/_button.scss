@@ -58,3 +58,25 @@
     }
   }
 }
+
+.btn-table {
+  background-color: transparent;
+  border-style: double;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  width: 50%;
+
+  &--edit:hover {
+    background-color: $color-secondary;
+  }
+
+  &--danger:hover {
+    background-color: #db1717;
+    color: $color-white;
+  }
+}
