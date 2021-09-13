@@ -81,7 +81,7 @@ function Home() {
           />
           <MaskedInput
             name="telefone"
-            mask="(99) 9 9999-9999"
+            mask={telefone[2] === '9' ? '(99) 9 9999-9999' : '(99) 9999-9999'}
             value={telefone}
             placeholder={setPlaceholder('telefone')}
             onChange={handleChange}

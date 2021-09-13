@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Context from '../context/Context';
 
-import { Header, Card } from '../components';
+import { Header, TableData } from '../components';
 import { saveLocalStorage, removeLocalStorage } from '../helper/localStorage';
 
 function Directory() {
@@ -22,9 +22,25 @@ function Directory() {
       {!users.length ? (
         <p>Nenhum usuário cadastrado</p>
       ) : (
-        users?.map((user, index) => {
-          return <Card user={user} handleDelete={handleDelete} index={index} />;
-        })
+        <table>
+          <thead>
+            <tr>
+              <th>NOME</th>
+              <th>CPF</th>
+              <th>EMAIL</th>
+              <th>TELEFONE</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {users?.map((user, index) => {
+                return <TableData user={user} handleDelete={handleDelete} index={index} />;
+              })}
+            </tr>
+          </tbody>
+        </table>
       )}
       <Link to="/">
         <button

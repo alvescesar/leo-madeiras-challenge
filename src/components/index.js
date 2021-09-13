@@ -1,5 +1,5 @@
 import Header from './Header';
 import MaskedInput from './MaskedInput';
-import Card from './Card';
+import TableData from './TableData';
 
-export { Header, MaskedInput, Card };
+export { Header, MaskedInput, TableData };
