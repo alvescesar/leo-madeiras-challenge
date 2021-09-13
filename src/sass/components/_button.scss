@@ -10,6 +10,12 @@
   transition: all 0.2s;
   width: 25vw;
 
+  &:disabled {
+    background-color: $color-disabled;
+    color: $color-grey-light;
+    pointer-events: none;
+  }
+
   &:hover {
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     transform: translateY(-0.5rem);

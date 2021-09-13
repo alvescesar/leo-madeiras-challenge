@@ -46,6 +46,10 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
   width: 25vw; }
+  .btn:disabled {
+    background-color: #afafaf;
+    color: #f7f7f7;
+    pointer-events: none; }
   .btn:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem); }

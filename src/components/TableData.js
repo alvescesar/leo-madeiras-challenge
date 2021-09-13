@@ -10,21 +10,17 @@ function TableData({ user, handleDelete, index }) {
       <td>CPF: {user.cpf}</td>
       <td>E-mail: {user.email}</td>
       <td>Telefone: {user.telefone}</td>
-      <td>
-        <Link to="/">
-          <button
-            type="button"
-            onClick={() => saveLocalStorage('userToEdit', { index, user })}
-          >
-            Editar
-          </button>
-        </Link>
-      </td>
-      <td>
-        <button type="button" onClick={() => handleDelete(index)}>
-          Deletar
+      <Link to="/">
+        <button
+          type="button"
+          onClick={() => saveLocalStorage('userToEdit', { index, user })}
+        >
+          Editar
         </button>
-      </td>
+      </Link>
+      <button type="button" onClick={() => handleDelete(index)}>
+        Deletar
+      </button>
     </>
   );
 }
