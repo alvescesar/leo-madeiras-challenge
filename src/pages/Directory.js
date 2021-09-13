@@ -39,15 +39,17 @@ function Directory() {
           </tbody>
         </table>
       )}
-      <Link to="/">
-        <button
-          type="button"
-          className="btn btn--grey"
-          onClick={() => removeLocalStorage('userToEdit')}
-        >
-          Cadastrar novo usuário
-        </button>
-      </Link>
+      <div className="flex-container">
+        <Link to="/">
+          <button
+            type="button"
+            className="btn btn--grey"
+            onClick={() => removeLocalStorage('userToEdit')}
+          >
+            Cadastrar novo usuário
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }
