@@ -1,5 +1,16 @@
 .flex-container {
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: 6rem;
+
+  &--notice {
+    color: $color-white;
+    font-size: 2rem;
+    transition: all 0.1s;
+
+    &:hover {
+      color: $color-dark;
+      font-size: 3rem;
+    }
+  }
 }

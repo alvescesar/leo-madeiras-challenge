@@ -20,7 +20,9 @@ function Directory() {
     <section>
       <Header title="Usuários cadastrados" />
       {!users.length ? (
-        <p>Nenhum usuário cadastrado</p>
+        <div className="flex-container">
+          <h4 className="flex-container--notice">Nenhum usuário cadastrado</h4>
+        </div>
       ) : (
         <table>
           <thead>

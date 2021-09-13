@@ -76,7 +76,7 @@
   }
 
   &--danger:hover {
-    background-color: #db1717;
+    background-color: $color-danger;
     color: $color-white;
   }
 }

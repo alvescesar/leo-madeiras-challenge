@@ -171,4 +171,11 @@ td {
 .flex-container {
   display: flex;
   justify-content: center;
-  padding: 3rem; }
+  padding: 6rem; }
+  .flex-container--notice {
+    color: #FFFFFF;
+    font-size: 2rem;
+    transition: all 0.1s; }
+    .flex-container--notice:hover {
+      color: #171717;
+      font-size: 3rem; }
