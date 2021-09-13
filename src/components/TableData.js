@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { saveLocalStorage } from '../helper/localStorage';
 
 function TableData({ user, handleDelete, index }) {
   return (
-    <Fragment>
+    <>
       <td>{user.nome}</td>
       <td>CPF: {user.cpf}</td>
       <td>E-mail: {user.email}</td>
@@ -25,7 +25,7 @@ function TableData({ user, handleDelete, index }) {
           Deletar
         </button>
       </td>
-    </Fragment>
+    </>
   );
 }
 

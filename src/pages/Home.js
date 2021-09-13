@@ -22,7 +22,7 @@ function Home() {
   const validEmail = emailRegEx.test(String(email).toLowerCase());
   const nameRegEx = /^[^±!@£$%^&*_+§¡€#¢§¶•ªº«\\/<>?:;|=.,]{1,20}$/; // caracteres NÃO inclusos em nomes
   const validName = nameRegEx.test(String(nome));
-  const isDisabled = !validEmail || !validName || cpf.length < 11 || telefone.length < 11;
+  const isDisabled = !validEmail || !validName || cpf.length < 11 || telefone.length < 10;
 
   const handleChange = (event) => {
     setValues({
