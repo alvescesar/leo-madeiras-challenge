@@ -29,14 +29,13 @@ function Directory() {
               <th>CPF</th>
               <th>EMAIL</th>
               <th>TELEFONE</th>
+              <th>AÇÕES</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              {users?.map((user, index) => {
-                return <TableData user={user} handleDelete={handleDelete} index={index} />;
-              })}
-            </tr>
+            {users?.map((user, index) => {
+              return <TableData user={user} handleDelete={handleDelete} index={index} />;
+            })}
           </tbody>
         </table>
       )}
