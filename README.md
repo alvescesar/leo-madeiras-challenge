@@ -30,8 +30,8 @@ Para rodar os testes (unitários, integração e end-to-end).
 
 **Notas do candidato:**
 
-**Projeto iniciado no sábado, 11 de setembro e entregue na segunda-feira, 13 de setembro.**
-**Optei pelo uso do Context somente para mostrar um pouco de habilidade com gerenciadores de estado. Em um app deste tamanho, não seria necessário.**
-**Devido ao pouco tempo que pude dedicar ao desafio, o layout para `@media screen and (max-width: 768px)` não foi finalizado dentro do prazo de entrega.**
+Projeto iniciado no sábado, 11 de setembro e entregue na segunda-feira, 13 de setembro.
+Optei pelo uso do Context somente para mostrar um pouco de habilidade com gerenciadores de estado. Em um app deste tamanho, não seria necessário.
+Devido ao pouco tempo que pude dedicar ao desafio, o layout para `@media screen and (max-width: 768px)` não foi finalizado dentro do prazo de entrega.
 
 **Muito obrigado pela consideração para essa vaga!**
